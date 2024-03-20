@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email, password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                                 startActivity(intent);
                                 finish();
+
                             }
                             else {
                                 Toast.makeText(MainActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();

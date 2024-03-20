@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    android:background="@drawable/screen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.SearchView
+        android:id="@+id/searchKey"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+
+    </android.widget.SearchView>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_below="@id/searchKey"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/LL1"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/BookList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+        </ListView>
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:layout_weight="1"
+        android:id="@+id/LL1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <Button
+            android:id="@+id/msg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            style="?android:attr/buttonBarButtonStyle" />
+        <ImageButton
+            android:id="@+id/addBook"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plus"
+            style="?android:attr/buttonBarButtonStyle"
+            android:contentDescription="Add" />
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
