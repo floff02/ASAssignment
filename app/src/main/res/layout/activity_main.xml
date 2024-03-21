@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    <!--    Creates the welcome message for users coming back to app    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:textSize="50sp"
         android:textColor="@color/white"
         />
-
+    <!--    Creates the text inputs that users enter their details to login to the app    -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <!--    The sign in button for users to login to their account    -->
     <Button
         android:id="@+id/sign_in"
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
         android:gravity="center">
 
 
-
+        <!--    Text that allows users who haven't created an account before to navigate to the register page    -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

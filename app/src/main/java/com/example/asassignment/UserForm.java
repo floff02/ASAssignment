@@ -1,5 +1,4 @@
 package com.example.asassignment;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import android.content.Intent;
@@ -18,12 +17,11 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.lang.Long;
-
 import android.os.Bundle;
-
+//imports all the libraries that are needed for this page of the app
 public class UserForm extends AppCompatActivity {
+    //Initializes all variables
     TextInputEditText editTextBookName, editTextAuthorName, editTextPublisherName, editTextISBN10, editTextISBN13, editTextReview;
     Button submit, back;
     int id;
@@ -32,6 +30,7 @@ public class UserForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_form);
+        // connects variables to the xml through IDs
         editTextBookName = findViewById(R.id.BookName);
         editTextAuthorName = findViewById(R.id.AuthorName);
         editTextPublisherName = findViewById(R.id.PublisherName);
@@ -42,10 +41,10 @@ public class UserForm extends AppCompatActivity {
         back = findViewById(R.id.back);
 
 
-
+        //Connects this page of the app to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://asassignment-8ab96-default-rtdb.europe-west1.firebasedatabase.app");
         DatabaseReference dbRef = database.getReference("books");
-
+        //Access the realtime database to access count, this is done to ensure when a new book is created it has a unique ID
         dbRef.child("count").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -56,7 +55,7 @@ public class UserForm extends AppCompatActivity {
                     Log.d("firebase", String.valueOf(task.getResult().getValue()));
                 }
             }});
-
+        //Allows the user to create a new book and add the book to the database ensuring that each book added has a unique ID
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +104,7 @@ public class UserForm extends AppCompatActivity {
 
 
 
-
+        //Allows the user to back back to the HomePage
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -10,7 +10,7 @@
     android:background="@drawable/screen"
     tools:context=".Profile">
 
-
+    <!--    Creates the Profile picture with a placeholder that the user can then change to their personal profile picture    -->
     <ImageView
         android:id="@+id/profilePic"
         android:layout_width="150dp"
@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:src="@drawable/pfpplaceholder"
         />
-
+    <!--  This button allows the user to select a different profile picture which will then set as their profile picture  -->
     <Button
         android:id="@+id/changePicture"
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/change_picture"
         />
-
+    <!--   These text inputs all the user to change their email and password - However this is currently not functional     -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <!--    Commits the changes of the users profile picture to the database    -->
     <Button
         android:id="@+id/saveChanges"
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/save_changes"
         />
-
+    <!--  Allows the user to signout  -->
     <Button
         android:id="@+id/signOut"
         android:layout_width="match_parent"
@@ -78,7 +78,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/sign_out"
         />
-
+    <!--  Sends the user back to the home page  -->
     <Button
         android:id="@+id/back"
         android:layout_width="match_parent"

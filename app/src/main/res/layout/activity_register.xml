@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".Register">
 
-
+    <!--    Creates the welcome message to users that need to create an account    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:textSize="50sp"
         android:textColor="@color/white"
         />
-
+    <!--    Creates the text boxes for the user to input their email and password    -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <!--    This button is clicked by the user once they have input their details, creating their account    -->
     <Button
         android:id="@+id/sign_up"
         android:layout_width="match_parent"
@@ -78,7 +78,7 @@
         android:gravity="center">
 
 
-
+        <!--    Allows users that already have an account to navigate back to the login page    -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

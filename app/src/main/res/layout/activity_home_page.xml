@@ -16,7 +16,7 @@
         android:layout_height="wrap_content">
 
     </android.widget.SearchView>
-
+<!--    This is the Scroll view that allows the page to scroll, only if the page contains more data that the screen can show-->
     <ScrollView
         android:id="@+id/scroll"
         android:layout_weight="1"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_above="@+id/LL1"
         android:layout_height="wrap_content">
-
+<!--        Creates the Listview in which all the books the user adds with be displayed to the users-->
         <ListView
             android:id="@+id/BookList"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
 
 
 
-
+<!--       Changes the Layout of the page to horizontal allowing the navbar buttons to be positioned next to each other rather than being on top of each other -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_gravity="center|bottom"
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content">
 
 
-
+        <!--    These are the nav bar buttons, allowing the user to navigate between different sccreens of the application    -->
         <Button
             android:id="@+id/msg"
             android:layout_weight="1"

@@ -8,7 +8,8 @@
     android:background="@drawable/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <!--    These text fields allow users to input data about books they want to add to the database, including the name of the book, the authors name,
+     the publishers name, the ISBN-10 and ISBN-13 numbers as well as a review of what they thought about the book   -->
             <com.google.android.material.textfield.TextInputLayout
                 android:paddingTop="260dp"
                 android:layout_width="match_parent"
@@ -98,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
+            <!--    These buttons either allow the user to go back to the home page or commit the book they want to add to the database    -->
             <Button
                 android:id="@+id/back"
                 android:layout_width="0dp"
