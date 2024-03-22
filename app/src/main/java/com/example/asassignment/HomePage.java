@@ -83,6 +83,13 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        msg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, Message.class);
+                startActivity(intent);
+            }
+        });
 
 
 

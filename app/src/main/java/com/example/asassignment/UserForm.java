@@ -66,26 +66,7 @@ public class UserForm extends AppCompatActivity {
                 ISBN10 = String.valueOf(editTextISBN10.getText());
                 ISBN13 = String.valueOf(editTextISBN13.getText());
                 Review = String.valueOf(editTextReview.getText());
-                if(TextUtils.isEmpty(BookName)){
-                    Toast.makeText(UserForm.this,"Enter A Book Name", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(Author)){
-                    Toast.makeText(UserForm.this,"Enter An Authors Name", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(Publisher)){
-                    Toast.makeText(UserForm.this,"Enter An Publishers Name", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(ISBN10)){
-                    Toast.makeText(UserForm.this,"Enter An ISBN-10 Number", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(ISBN13)){
-                    Toast.makeText(UserForm.this,"Enter An ISBN-13 Number", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+
                 id++;
                 Book book = new Book(BookName, id, Author, Publisher, ISBN10, ISBN13, Review);
                 DatabaseReference bookRef = dbRef.child(String.valueOf(book.cat_num));

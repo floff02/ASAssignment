@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen">
+
+
+    <!--    This is the Scroll view that allows the page to scroll, only if the page contains more data that the screen can show-->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_above="@+id/LL1"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        Creates the Listview in which all the books the user adds with be displayed to the users-->
+        <ListView
+            android:id="@+id/MsgList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+        </ListView>
+
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LL1"
+
+        android:orientation="horizontal">
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:hint="Send A message"
+                android:inputType="textLongMessage" />
+
+            <Button
+                android:id="@+id/send"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <!--       Changes the Layout of the page to horizontal allowing the navbar buttons to be positioned next to each other rather than being on top of each other -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:layout_weight="1"
+        android:id="@+id/LL1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--    These are the nav bar buttons, allowing the user to navigate between different sccreens of the application    -->
+        <Button
+            android:id="@+id/back"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            style="?android:attr/buttonBarButtonStyle" />
+
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
